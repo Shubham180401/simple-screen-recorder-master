@@ -1,4 +1,3 @@
-
 const startButton = document.getElementById('start-button');
 const stopButton = document.getElementById('stop-button');
 const videoElement = document.getElementById('video-element');
