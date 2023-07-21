@@ -1,90 +1,228 @@
+/* :root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+}
+
+.dark-theme {
+  --primary-color: #f8f9fa;
+  --secondary-color: #343a40;
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.light-theme {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+button:nth-child(2):hover {
+  background-color: #ed7474;
+}
+
+button:nth-child(4):hover {
+  background-color: #3498db;
+}
+
+#screen-recorder {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(151, 217, 248, 0.8);
+  border-radius: 10px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+video {
+  width: 100%;
+  max-height: 500px;
+  border-radius: 5px;
+  margin: 20px 0 20px 0;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  box-sizing: border-box;
+  display: block;
+  background-color: #0e4166;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(14, 65, 102, 0.86),
+    #0e4166
+  );
+} */
+
+
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #fff;
+    --text-color: #000;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-color: #23c483;
+  }
+  
+  .dark-mode {
+    --primary-color: #f8f9fa;
+    --secondary-color: #343a40;
+    --background-color: #343a40;
+    --text-color: #f8f9fa;
+    --box-shadow-color: rgba(248, 249, 250, 0.1);
+    --hover-color: #2ee59d;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-size: cover;
-}
-
-button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  button {
     padding: 1.3em 3em;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
-    color: #000;
-    background-color: #fff;
+    color: var(--text-color);
+    background-color: var(--background-color);
     border: none;
     border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 15px var(--box-shadow-color);
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-}
-
-button:hover {
-    background-color: #23c483;
+  }
+  
+  button:hover {
+    background-color: var(--hover-color);
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: #fff;
+    color: var(--text-color);
     transform: translateY(-7px);
-}
-
-button:active {
+  }
+  
+  button:active {
     transform: translateY(-1px);
-}
-
-button:nth-child(2):hover {
-    background-color: #ed7474
-}
-
-button:nth-child(4):hover {
+  }
+  
+  button:nth-child(2):hover {
+    background-color: #ed7474;
+  }
+  
+  button:nth-child(4):hover {
     background-color: #3498db;
-}
-
-#screen-recorder {
+  }
+  
+  #screen-recorder {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(151, 217, 248, 0.8);
     border-radius: 10px;
     text-align: center;
-}
-
-h1 {
+  }
+  
+  h1 {
     font-size: 36px;
     margin-bottom: 10px;
-}
-
-p {
+    color: var(--primary-color);
+  }
+  
+  p {
     font-size: 18px;
     margin-bottom: 20px;
-}
-
-
-
-button:disabled {
+    color: var(--secondary-color);
+  }
+  
+  button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-}
-
-video {
+  }
+  
+  video {
     width: 100%;
     max-height: 500px;
     border-radius: 5px;
     margin: 20px 0 20px 0;
-}
-
-
-
-svg {
+  }
+  
+  svg {
     position: absolute;
     top: 0;
     left: 0;
@@ -94,6 +232,14 @@ svg {
     box-sizing: border-box;
     display: block;
     background-color: #0e4166;
-    background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
-}
-
+    background-image: linear-gradient(
+      to bottom,
+      rgba(14, 65, 102, 0.86),
+      #0e4166
+    );
+  }
+  
+  .dark-mode svg {
+    background-color: #343a40;
+    background-image: linear-gradient(to bottom, rgba(52, 58, 64, 0.86), #343a40);
+  }
