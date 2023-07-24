@@ -15,5 +15,4 @@ To get started with the Simple Screen Recorder, simply clone this repository and
 # Deployed Version
 
 You can try out this Screen Recorder on the following deployed website:
-
-https://adbspec.github.io/simple-screen-recorder/
+https://shubham180401.github.io/simple-screen-recorder-master/
